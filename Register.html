@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monjez</title>
+    <link rel="icon" type="image/x-icon" href="/img/">
+    <link href="lib/bootstrap/css/bootstrap.rtl.css" rel="stylesheet" />
+
+    <style>
+        .form-label {
+        margin-top:15px;
+        
+        }
+
+    </style>
+
+
+</head>
+<body class="bg-body-tertiary">
+    <div class="row bg-primary  p-4  ">
+        <div class="fs-2  justify-content-center text-center">
+            <a href="index.html" style="text-decoration:none;color:#fff; font-weight:bold;">منجز</a>
+        </div>
+    </div>
+    <div class="row  justify-content-center my-3">
+        <div class="col-11 col-md-9 col-xl-6 justify-content-between align-items-center  text-center  ">
+            <h2 class="text-center mb-2">انشاء حساب</h2>
+            <button id="btnprov" class="btn btn-outline-primary mx-4 " onclick="addprov() ">مزود خدمة</button>
+            <button id="btnprov2" class="btn btn-primary mx-4 " style="display:none;" onclick="addprov() ">مزود خدمة</button>
+            <button id="btncust2" class="btn btn-primary mx-4  "  onclick="addcust()"> طالب خدمه(عميل)</button>
+            <button id="btncust" class="btn btn-outline-primary mx-4  " style="display:none;" onclick="addcust()"> طالب خدمه(عميل)</button>
+
+        </div>
+        </div>
+        <div class="row  justify-content-center my-3">
+            <div class="col-10 col-md-8 col-xl-6 justify-content-between align-items-center    ">
+
+
+                <!-- نموذج مزود الخدمة -->
+                <form id="serprov" class="active" style="display:none;">
+                    <label class="form-label" for="pName">الاسم الكامل</label>
+                    <input type="text" class="form-control" id="pName" placeholder="أدخل اسمك الكامل" required>
+
+                    <label class="form-label" for="pEmail">البريد الإلكتروني</label>
+                    <input type="email" class="form-control" id="pEmail" placeholder="أدخل بريدك الإلكتروني" required>
+
+                    <label class="form-label" for="pPassword">كلمة المرور</label>
+                    <input type="password" class="form-control" id="pPassword" placeholder="أدخل كلمة المرور" required>
+
+
+                    <!--<label class="form-label">المجال:</label><br />
+                    <select class="form-select" id="field" required>
+                        <option value="">اخترالمجال</option>
+                        <option value="طب">طب</option>
+                        <option value="برمجة">برمجة</option>
+                        <option value="انشاء">انشاء</option>
+                        <option value="تعليم">تعليم</option>
+                    </select><br />
+
+                    <label class="form-label">التخصص:</label><br />
+                    <select class="form-select" id="fielddoc" required>
+                        <option value="">اخترالتخصص</option>
+                        <option value="اطفال">اطفال</option>
+                        <option value="جراحة عامة">جراحة عامة</option>
+                        <option value="قلب">قلب</option>
+                        <option value="عظام">عظام</option>
+                        <option value="مخ واعصاب">مخ واعصاب</option>
+                    </select>
+
+                    <select class="form-select" id="fieldpro" required>
+                        <option value="">اختر التخصص</option>
+                        <option value="منظومات">منظومات</option>
+                        <option value="ويب">ويب</option>
+                        <option value="تطبيقات">تطبيقات</option>
+                        <option value="قواعد بيانات">قواعد بيانات</option>
+                    </select>
+
+                    <select class="form-select" id="fieldeng" required>
+                        <option value="">اختر التخصص</option>
+                        <option value="تصميم الديكورات">تصميم الديكورات</option>
+                        <option value="كهرباء">كهرباء</option>
+                        <option value="بناء">بناء</option>
+                        <option value="سباكة">سباكة</option>
+                    </select>
+
+                    <select class="form-select" id="fieldteach" required>
+                        <option value="">اختر التخصص</option>
+                        <option value="رياضيات">رياضيات</option>
+                        <option value="فيزياء">فيزياء</option>
+                        <option value="كيمياء">كيمياء</option>
+                        <option value="اللغةالعربية">اللغةالعربية</option>
+                        <option value="اللغةالانجليزية">اللغةالانجليزية</option>
+                    </select><br />-->
+                    <!--<label class="form-label mt-3 p-1" for="male">الجنس</label>
+                    <div class="  p-2 ">
+                        <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary me-3" for="male">ذكر</label>
+
+                        <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off">
+                        <label class="btn btn-outline-danger" for="female">أنثى</label>
+                    </div>-->
+
+                    <label class="form-label" for="pDescription">الوصف الشخصي / نبذة</label>
+                    <textarea id="pDescription" class="form-control" rows="4" placeholder="اكتب نبذة عن خبرتك" required></textarea>
+
+                    <label class="form-label" for="pLocation">الموقع / المدينة</label>
+                    <input type="text" id="pLocation" class="form-control" placeholder="أدخل موقعك أو مدينتك" required>
+
+                    <label class="form-label" for="pPhone">رقم الهاتف</label>
+                    <input type="tel" class="form-control" id="pPhone" placeholder="أدخل رقم الهاتف" required>
+
+
+                    <!--<label class="form-label" for="pImage">صورة شخصية أو لوجو</label>
+                    <input type="file" id="pImage" class="form-control" accept="image/*">-->
+                    <!--<label class="form-label" for="pPrice"></label>
+                    <input type="text" id="pPrice" class="form-control" placeholder="اختياري – بالساعة أو حسب الخدمة">-->
+                    <!--<label class="form-label" for="pAvailability">توفر الوقت</label>
+                    <input type="text" id="pAvailability" class="form-control" placeholder="مثال: 9 صباحًا – 5 مساءً" required>-->
+
+                    <div class="text-center">
+                        <button type="submit" onclick="addUsers(event)" class="btn btn-primary text-center my-3">إنشاء حساب مزود الخدمة</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="row  justify-content-center my-3">
+            <div class="col-10 col-md-8 col-xl-6 justify-content-between align-items-center    ">
+
+                <form id="sercust">
+                    <label class="form-label" for="cName">الاسم الكامل</label>
+                    <input type="text" class="form-control" id="cName" placeholder="أدخل اسمك الكامل" required>
+
+                    <label class="form-label" for="cEmail">البريد الإلكتروني</label>
+                    <input type="email" class="form-control" id="cEmail" placeholder="أدخل بريدك الإلكتروني" required>
+
+                    <label class="form-label" for="cPassword">كلمة المرور</label>
+                    <input type="password" class="form-control" id="cPassword" placeholder="أدخل كلمة المرور" required>
+
+                    <label class="form-label" for="cPhone">رقم الهاتف</label>
+                    <input type="tel" class="form-control" id="cPhone" placeholder="أدخل رقم الهاتف" required>
+
+                    <label class="form-label" for="cLocation">المكان / المدينة</label>
+                    <input type="text" class="form-control" id="cLocation" placeholder="أدخل المدينة أو المكان" required>
+                    <div class="mb-3 ">
+                        <label for="cPayment" class="form-label">طريقة الدفع</label>
+                        <div class="input-group">
+
+                            <select class="form-select" id="cPayment">
+                                <option value="">اختر طريقة الدفع</option>
+                                <option value="كاش">كاش</option>
+                                <option value="بطاقة">بطاقة</option>
+                            </select>
+                            <span class="input-group-text" id="basic-addon1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0" />
+                                    <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z" />
+                                    <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z" />
+                                    <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+
+                        <button type="submit" onclick="addUsers(event)" class="btn btn-primary my-3  ">إنشاء حساب عميل</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+        <div class="m-3 p-3"></div>
+
+
+
+
+
+
+
+        <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script src="js/index.js"></script>
+
+</body>
+</html>

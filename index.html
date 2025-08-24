@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html dir="rtl" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monjez</title>
+    <link rel="icon" type="image/x-icon" href="/img/">
+    <link href="lib/bootstrap/css/bootstrap.rtl.css" rel="stylesheet" />
+    
+
+    <link href="css/index.css" rel="stylesheet" />
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #e7f1ff;
+            color: #0a192f;
+        }
+
+        .dark-mode {
+            background-color: #021c45;
+            color: #f1f5f9;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .toggle-btn {
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .abouts {
+            text-align: center;
+            padding: 10px;
+         
+        }
+       
+    </style>
+
+
+</head>
+
+<body class="mt-5 mt-xl-5">
+
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-dark">
+        <div class="container-fluid">
+            <!-- شعار -->
+            <a class="navbar-brand mx-2 fs-1 fw-bold" href="#">منجز</a>
+
+            <!-- زر القائمة عند الشاشات الصغيرة -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- القائمة الرئيسية -->
+            <div class="collapse navbar-collapse" id="mainMenu">
+
+                <!-- روابط الخدمات -->
+                <ul class="navbar-nav me-auto w-25 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link  btn btn-primary" href="#serviess">خدماتنا</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  btn btn-primary dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            عن منجز
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item  btn btn-primary " href="about.html">من نحن</a></li>
+                            <li><a class="dropdown-item  btn btn-primary" href="contactUs.html"> تواصل معنا </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- مربع البحث -->
+                <form class="d-flex me-auto ">
+                    <input class="form-control me-1" type="search" placeholder="بحث">
+                    <button class="btn btn-light" type="submit">بحث</button>
+                </form>
+
+                <!-- روابط الحساب -->
+                <ul class="navbar-nav  me-3 mb-2 mb-lg-0">
+                    <li id="liaddser"  class="nav-item "><a class="nav-link fs-5 btn btn-primary" href="addService.html">إضافة خدمة</a></li>
+                    <li id="lireser" class="nav-item "><a class="nav-link fs-5 btn btn-primary" href="reservations.html">الحجوزات</a></li>
+                    <li id="liregis" class="nav-item  "><a class="nav-link fs-5  btn btn-primary" href="Register.html">إنشاء حساب</a></li>
+                    <li id="lilogin" class="nav-item "><a class="nav-link fs-5 fw-bold btn btn-primary" href="login.html">تسجيل دخول</a></li>
+                </ul>
+
+                <!-- اللغة + الوضع -->
+                <ul class="navbar-nav mx-5  " >
+                    <li class="nav-item dropdown mb-2 mb-xl-0">
+                        <button class=" btn btn-primary dropdown-toggle me-2" type="button" data-bs-toggle="dropdown">
+                            🌐 اللغة
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item  btn btn-primary" href="#">العربية</a></li>
+                            <li><a class="dropdown-item  btn btn-primary" href="#">English</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown me-2 ms-0 ms-xl-2  mb-2 mb-xl-0">
+                        <button id="sun" class="btn  btn-primary toggle-btn" onclick="toggleMode() " type="button">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+                                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                                </svg>
+                            </span>
+
+                        </button>
+                        <button id="moon" class="btn  btn-primary toggle-btn hidden" onclick="toggleMode() " type="button">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <button id="btnexit" class="btn  btn-primary toggle-btn " type="button">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+                                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+                                </svg>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+  
+    
+    <!--_______________________________________________________________________________-->
+    <div class="row justify-content-center justify-content-lg-around mt-3 pt-4 mt-xl-5 pt-xl-5 ">
+
+        <div class="col-10 col-md-6 col-xl-4    ">
+        <div id="carouselExampleCaptions" class="carousel slidec carousel-fade " data-bs-ride="carousel ">
+            <!--<div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+        </div>-->
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="img/photo_2_2025-08-16_16-28-58.jpg" class="d-block w-100 carouselImg" alt="...">
+
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="img/photo_4_2025-08-16_16-28-58.jpg" class="d-block w-100 carouselImg" alt="...">
+
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="img/photo_3_2025-08-16_16-28-58.jpg" class="d-block w-100 carouselImg" alt="...">
+
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------->
+        <div class="col-10 col-md-6 col-xl-4  ">
+        <div class="abouts m-0 p-0 mt-2 mt-md-5 pt-md-5 ">
+            <h2>لماذا تختار منصة منجز؟</h2>
+            <p>
+                "منجز" منصة تجمع لك مختلف الخدمات في مكان واحد، من
+                <strong>التقنية</strong> كالبرمجة،
+                إلى <strong>المهنية</strong> كالاستشارات القانونية والمالية،
+                مروراً بـ <strong>الخدمات الطبية</strong>،
+                ووصولاً إلى <strong>الخدمات الإنشائية والصيانة</strong>.
+                <br>
+                نمنحك تجربة سهلة، حجز سريع، وأسعار شفافة مع ضمان الجودة في كل خدمة.
+            </p>
+        </div>
+    </div>
+    </div>
+
+        <!------------------------------------------------------------------------------------------------------>
+        <div id="serviess" class="services">
+            <h2 class="fs-1 mb-3 fw-bold ">خدماتنا</h2>
+            <div class="services-container">
+
+
+                <div id="cards-container">
+
+                    <a href="programmerpage.html" class="service-card-link">
+                        <div class="service-card" style="background-image: url('img/images.jpg');">
+                            <div class="card-content">برمجة</div>
+                        </div>
+                    </a>
+
+                    <a href="doctorpage.html" class="service-card-link">
+                        <div class="service-card" style="background-image: url('img/تنزيل (3).jpg');">
+                            <div class="card-content">طب</div>
+                        </div>
+                    </a>
+
+                    <a href="teacherpage.html" class="service-card-link">
+                        <div class="service-card" style="background-image: url('img/images (1).jpg');">
+                            <div class="card-content">تعليم</div>
+                        </div>
+                    </a>
+
+                    <a href="engineer.html" class="service-card-link">
+                        <div class="service-card" style="background-image: url('img/تنزيل (4).jpg');">
+                            <div class="card-content">انشاء</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('img/images (3).jpg');">
+                            <div class="card-content">تصميم</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('img/images (2).jpg');">
+                            <div class="card-content">شبكات</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://www.hbku.edu.qa/sites/default/files/spotlight/rule_of_law_-_forum_1.jpg');">
+                            <div class="card-content">قانون ومحاماة</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                            <div class="card-content">صحافة وإعلام</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                            <div class="card-content">تحليل البيانات</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                            <div class="card-content">المالية والمحاسبة</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                            <div class="card-content">تصميم داخلي</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                            <div class="card-content">التمريض</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                            <div class="card-content">الترجمة</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToTKxNkNcFl6emb5TdxzWRqLyBAIOTxoBRdw&s');">
+                            <div class="card-content">التسويق الرقمي</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                            <div class="card-content">كتابة المحتوى</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                            <div class="card-content">التغذية</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTwh-F1TqpApuTZkLQDW98njoxmPoOSmG93Q&s');">
+                            <div class="card-content">التصوير الفوتوغرافي</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://images.stockcake.com/public/0/4/a/04aa8ad2-b422-44c4-bf3e-20fdb7a7cd1b_large/video-editing-suite-stockcake.jpg');">
+                            <div class="card-content">الإخراج والمونتاج</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card-link">
+                        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                            <div class="card-content">التنمية البشرية</div>
+                        </div>
+                    </a>
+
+                    <!--<a href="#" class="service-card-link">
+                    <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                        <div class="card-content">علوم البيئة</div>
+                    </div>
+                </a>-->
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <footer class=" text-white text-opacity-75 py-3 bg-primary text-center">
+            <small> جميع الحقوق محفوظة &copy; 2025 </small>
+        </footer>
+
+        <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script src="js/index.js"></script>
+</body>
+</html>

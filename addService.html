@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>addService</title>
+    <link rel="icon" type="image/x-icon" href="/img/">
+    <link href="lib/bootstrap/css/bootstrap.rtl.css" rel="stylesheet" />
+    
+</head>
+<body class="bg-body-tertiary ">
+    <div class="row bg-primary  p-4  ">
+        <div class="fs-2  justify-content-center text-center">
+            <a href="index.html" style="text-decoration:none;color:#fff; font-weight:bold;">منجز</a>
+        </div>
+    </div>
+
+    <div class="row m-2 p-2 bg-body-tertiary justify-content-center  ">
+        <div class="col-11 col-md-9 col-lg-7 col-xl-6 justify-content-center align-items-center ">
+
+            <h2 class="text-center">إضافة خدمة جديدة</h2>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label" for="sName">اسم مقدم الخدمة</label>
+                    <input type="text" class="form-control" id="sName" placeholder="مثال: د.احمد الاحمدي" required>
+                </div>
+
+                <label class="form-label" for="field">المجال:</label><br />
+                <select class="form-select" id="field">
+                    <option value="">اخترالمجال</option>
+                    <option value="طب">طب</option>
+                    <option value="برمجة">برمجة</option>
+                    <option value="انشاء">انشاء</option>
+                    <option value="تعليم">تعليم</option>
+                </select><br />
+
+                <label class="form-label">التخصص:</label><br />
+                <select class="form-select" id="fielddoc" required>
+                    <option value="">اخترالتخصص</option>
+                    <option value="اطفال">اطفال</option>
+                    <option value="جراحة عامة">جراحة عامة</option>
+                    <option value="قلب">قلب</option>
+                    <option value="عظام">عظام</option>
+                    <option value="مخ واعصاب">مخ واعصاب</option>
+                </select>
+
+                <select class="form-select" id="fieldpro" required>
+                    <option value="">اختر التخصص</option>
+                    <option value="منظومات">منظومات</option>
+                    <option value="ويب">ويب</option>
+                    <option value="تطبيقات">تطبيقات</option>
+                    <option value="قواعد بيانات">قواعد بيانات</option>
+                </select>
+
+                <select class="form-select" id="fieldeng" required>
+                    <option value="">اختر التخصص</option>
+                    <option value="تصميم الديكورات">تصميم الديكورات</option>
+                    <option value="كهرباء">كهرباء</option>
+                    <option value="بناء">بناء</option>
+                    <option value="سباكة">سباكة</option>
+                </select>
+
+                <select class="form-select" id="fieldteach" required>
+                    <option value="">اختر التخصص</option>
+                    <option value="رياضيات">رياضيات</option>
+                    <option value="فيزياء">فيزياء</option>
+                    <option value="كيمياء">كيمياء</option>
+                    <option value="اللغةالعربية">اللغةالعربية</option>
+                    <option value="اللغةالانجليزية">اللغةالانجليزية</option>
+                </select><br />
+
+                <div class="mb-3">
+                    <label class="form-label" for="typServ">نوع الخدمه</label>
+                    <input type="text" id="typServ" class="form-control" placeholder="كشف عام" required>
+                </div>
+                <!-- المجال -->
+                <!--<div class="dropdown mb-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        اختر المجال
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><button class="dropdown-item" data-value="طب" type="button">طب</button></li>
+                        <li><button class="dropdown-item" data-value="برمجة" type="button">برمجة</button></li>
+                        <li><button class="dropdown-item" data-value="انشاءوبناء" type="button">انشاءوبناء</button></li>
+                        <li><button class="dropdown-item" data-value="تعليم" type="button">تعليم</button></li>
+                    </ul>
+                </div>-->
+                <!-- تخصصات الطب -->
+                <!--<div class="dropdown mb-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        اختر التخصص
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><button class="dropdown-item" data-value="اطفال" type="button">اطفال</button></li>
+                        <li><button class="dropdown-item" data-value="جراحة عامة" type="button">جراحة عامة</button></li>
+                        <li><button class="dropdown-item" data-value="قلب" type="button">قلب</button></li>
+                        <li><button class="dropdown-item" data-value="عظام" type="button">عظام</button></li>
+                        <li><button class="dropdown-item" data-value="مخ واعصاب" type="button">مخ واعصاب</button></li>
+                    </ul>
+                </div>-->
+                <!-- تخصصات البرمجة -->
+                <!--<div class="dropdown mb-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        اختر التخصص
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><button class="dropdown-item" data-value="منظومات" type="button">منظومات</button></li>
+                        <li><button class="dropdown-item" data-value="ويب" type="button">ويب</button></li>
+                        <li><button class="dropdown-item" data-value="تطبيقات" type="button">تطبيقات</button></li>
+                        <li><button class="dropdown-item" data-value="قواعد بيانات" type="button">قواعد بيانات</button></li>
+                    </ul>
+                </div>-->
+                <!-- تخصصات الانشاء -->
+                <!--<div class="dropdown mb-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        اختر التخصص
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><button class="dropdown-item" data-value="تصميم الديكور" type="button">تصميم الديكورات</button></li>
+                        <li><button class="dropdown-item" data-value="كهرباء" type="button">كهرباء</button></li>
+                        <li><button class="dropdown-item" data-value="بناء" type="button">بناء</button></li>
+                        <li><button class="dropdown-item" data-value="سباكة" type="button">سباكة</button></li>
+                    </ul>
+                </div>-->
+                <!-- تخصصات التعليم -->
+                <!--<div class="dropdown mb-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        اختر التخصص
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><button class="dropdown-item" data-value="رياضيات" type="button">رياضيات</button></li>
+                        <li><button class="dropdown-item" data-value="فيزياء" type="button">فيزياء</button></li>
+                        <li><button class="dropdown-item" data-value="كيمياء" type="button">كيمياء</button></li>
+                        <li><button class="dropdown-item" data-value="اللغة العربية" type="button">اللغة العربية</button></li>
+                        <li><button class="dropdown-item" data-value="اللغة الانجليزية" type="button">اللغة الانجليزية</button></li>
+                    </ul>
+                </div>-->
+
+
+                <div class="mb-3">
+                    <label class="form-label" for="sDescription">الوصف</label>
+                    <textarea class="form-control" id="sDescription" rows="2" placeholder="أدخل وصف الخدمة" required></textarea>
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label" for="sPrice">السعر </label>
+                    <input type="number" class="form-control" id="sPrice" placeholder="أدخل السعر بالدينار" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="sLocation">المكان / المدينة</label>
+                    <input type="text" class="form-control" id="sLocation" placeholder="طرابلس - بنغازي - ..." required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="sDate">التاريخ</label>
+                    <input type="date" id="sDate" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="sTime">الوقت المتاح</label>
+                    <input type="time" id="sTime" class="form-control" required>
+                </div>
+                <div class="justify-content-center align-items-center text-center">
+                    <button type="submit" onclick="addServProv()" class="btn btn-success w-50 ">إضافة الخدمة</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+    <div class="row  justify-content-center  align-items-center my-5">
+        <div class="col-12">
+            <div id="servContainers" class="row servContainer g-2 justify-content-center ">
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
