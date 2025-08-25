@@ -9,9 +9,9 @@
     
 </head>
 <body class="bg-body-tertiary ">
-    <div class="row bg-primary  p-4  ">
+    <div class="row bg-primary  p-4  m-0 ">
         <div class="fs-2  justify-content-center text-center">
-            <a href="index.html" style="text-decoration:none;color:#fff; font-weight:bold;">منجز</a>
+            <a href="index.html" style="text-decoration:none;color:#fff; font-weight:bold;">مُنْجَزٌ</a>
         </div>
     </div>
 
@@ -22,7 +22,7 @@
             <form>
                 <div class="mb-3">
                     <label class="form-label" for="sName">اسم مقدم الخدمة</label>
-                    <input type="text" class="form-control" id="sName" placeholder="مثال: د.احمد الاحمدي" required>
+                    <input type="text" class="form-control"  style="direction:rtl;text-align:right;"  id="sName" placeholder="مثال: د.احمد الاحمدي" required>
                 </div>
 
                 <label class="form-label" for="field">المجال:</label><br />
@@ -71,7 +71,7 @@
 
                 <div class="mb-3">
                     <label class="form-label" for="typServ">نوع الخدمه</label>
-                    <input type="text" id="typServ" class="form-control" placeholder="كشف عام" required>
+                    <input type="text" id="typServ" class="form-control"  style="direction:rtl;text-align:right;"  placeholder="كشف عام" required>
                 </div>
                 <!-- المجال -->
                 <!--<div class="dropdown mb-3">
@@ -139,25 +139,25 @@
 
                 <div class="mb-3">
                     <label class="form-label" for="sDescription">الوصف</label>
-                    <textarea class="form-control" id="sDescription" rows="2" placeholder="أدخل وصف الخدمة" required></textarea>
+                    <textarea class="form-control" id="sDescription" rows="2"  style="direction:rtl;text-align:right;"  placeholder="أدخل وصف الخدمة" required></textarea>
                 </div>
 
 
                 <div class="mb-3">
                     <label class="form-label" for="sPrice">السعر </label>
-                    <input type="number" class="form-control" id="sPrice" placeholder="أدخل السعر بالدينار" required>
+                    <input type="number" class="form-control" id="sPrice"  style="direction:rtl;text-align:right;"  placeholder="أدخل السعر بالدينار" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="sLocation">المكان / المدينة</label>
-                    <input type="text" class="form-control" id="sLocation" placeholder="طرابلس - بنغازي - ..." required>
+                    <input type="text" class="form-control" id="sLocation"  style="direction:rtl;text-align:right;"  placeholder="طرابلس - بنغازي - ..." required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="sDate">التاريخ</label>
-                    <input type="date" id="sDate" class="form-control" required>
+                    <input type="date" id="sDate" class="form-control"  style="direction:rtl;text-align:right;"  required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="sTime">الوقت المتاح</label>
-                    <input type="time" id="sTime" class="form-control" required>
+                    <input type="time" id="sTime" class="form-control"  style="direction:rtl;text-align:right;"  required>
                 </div>
                 <div class="justify-content-center align-items-center text-center">
                     <button type="submit" onclick="addServProv()" class="btn btn-success w-50 ">إضافة الخدمة</button>
